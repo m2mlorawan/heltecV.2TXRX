@@ -17,10 +17,14 @@ def receive(lora):
 
     while True:
         if lora.received_packet():
+            rssi=lora.packet_rssi()
             lora.blink_led()
             payload = lora.read_payload()
             print(payload)
+            print(rssi)
             oled.fill(0)
             oled.text(payload, 10, 10)
+            oled.text("RSSI:", 10, 20)
+            oled.text(str(rssi), 50, 20)
             oled.show()
             
