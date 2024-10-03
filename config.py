@@ -65,10 +65,10 @@ app_config = {
 }
 
 lora_parameters = {
-    'frequency': 915E6, 
+    'frequency': 923E6, 
     'tx_power_level': 2, 
     'signal_bandwidth': 125E3,    
-    'spreading_factor': 8, 
+    'spreading_factor': 12, 
     'coding_rate': 5, 
     'preamble_length': 8,
     'implicit_header': False, 
